@@ -34,6 +34,6 @@ spec:
               service:
                 name: {{ include "livy.fullname" $ }}
                 port:
-                  name: http
+                  number: {{ $.Values.service.port }}
   {{- end }}
 {{- end }}
