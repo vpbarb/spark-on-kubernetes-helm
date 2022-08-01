@@ -31,8 +31,9 @@ spec:
           - path: {{ $.Values.ingress.path }}
             pathType: Prefix
             backend:
-              service: {{ include "livy.fullname" $ }}
-              port:
-                name: http
+              service:
+                name: {{ include "livy.fullname" $ }}
+                port:
+                  name: http
   {{- end }}
 {{- end }}
